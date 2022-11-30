@@ -5,12 +5,15 @@ import Link from "next/link";
 import GoogleLogin from "react-google-login";
 import { AiFillHome, AiOutlineMenu, AiOutlineTable } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
+import Discover from "./Discover";
+import SuggestedAccounts from "./SuggestedAccounts";
+import Footer from "./Footer";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
   const userProfile = false;
   const normalLink =
-    "flex items-center gap-3 hober:bg-primary p-3 justify-center x1:justify-start cursor-pointer font-semibold text-[#F51997] rounded";
+    "flex items-center gap-3 hover:bg-primary p-3 justify-center x1:justify-start cursor-pointer font-semibold text-[#F51997] rounded";
 
   return (
     <div>
@@ -48,7 +51,9 @@ const Sidebar = () => {
                   clientId=""
                   render={(renderProps) => (
                     <button
-                      className="bg-white text-lg text-[#F51997]"
+                      className="bg-white text-lg text-[#F51997] border-[1px] 
+                      border-[#F51997] font-semibold px-6 py-3 rounded-md outline-none w-full mt-3 
+                      hober:text-white hober:bg-[#F51997]"
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
                     >
@@ -62,6 +67,9 @@ const Sidebar = () => {
               </div>
             </div>
           )}
+          <Discover />
+          <SuggestedAccounts />
+          <Footer />
         </div>
       )}
     </div>
