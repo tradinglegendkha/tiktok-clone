@@ -1,3 +1,8 @@
-export default function Home() {
-  return <div>Vine</div>;
-}
+import type { NextPage } from "next";
+import axios from "axios";
+
+const Home: NextPage = () => {
+  return <div>index</div>;
+};
+
+export default Home;
